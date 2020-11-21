@@ -22,6 +22,14 @@ const answers = {
   ],
 };
 
-function magicEightBall() {}
+const answerIndex = randomNumber(Object.keys(answers).length);
+const answerKey = Object.keys(answers)[answerIndex];
+const responseIndex = randomNumber(answers[answerKey].length);
+const finalAnswer = answers[answerKey][responseIndex];
+
+function magicEightBall() {
+  console.log(answerKey);
+  console.log(finalAnswer);
+}
 
 magicEightBall();
